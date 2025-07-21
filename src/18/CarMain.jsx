@@ -126,15 +126,15 @@ export default function CarMain() {
         </div>
               <div className="w-full grid grid-1 lg:grid-cols-3 gap-4 mt-5
                           ">
-        {tdata.map(item=> <TailCard key={item.statId+ item.chgerId}
-                                    imgurl=""
-                                    title={item.statNm}
-                                    subtitle={`(${item.bnm},${item.addr},${item.busiCall})`}
-                                    content={`(${item.useTime},
-                                    ${stat[item.stat] == undefined ? '' : ',' + stat[item.stat]},
-                                    ,주차료${item.parkingFree == 'Y' ? '무료' : '유료'},
-                                    충전방식${item.method}, 충전용량${item.output}kW)`}
-         />)};
+        {tdata.map(item=> <TailCard key={item.statId + item.chgerId}  
+                                      title={item.statNm}
+                                      subtitle={`${item.bnm}(${item.addr},${item.busiCall})`} 
+                                      content ={`${item.useTime}
+                                      ${stat[item.stat] == undefined ? '' : ','+ stat[item.stat] }
+                                      ,주차료${item.parkingFree == 'Y'? '무료' : '유료'}
+                                      ,충전방식${item.method}
+                                      ,충전용량 ${item.output}kW`}
+                                      />)};
       </div>
       <div className='w-full mt-5'>
         <TailPageNation currentPage={currentPage}
