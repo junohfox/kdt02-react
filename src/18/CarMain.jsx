@@ -71,7 +71,7 @@ export default function CarMain() {
         }
 
     const apikey = import.meta.env.VITE_DATA_API;
-    let url = 'http://apis.data.go.kr/B552584/EvCharger/getChargerInfo?';
+    let url = 'https://apis.data.go.kr/B552584/EvCharger/getChargerInfo?';
      url = `${url}serviceKey=${apikey}&numOfRows=${perPage}&pageNo=${cpage}&dataType=JSON`;
 
      if(zcodeRef.current.value != "") {
